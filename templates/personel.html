@@ -1,0 +1,50 @@
+{% extends "taslak.html" %}
+{% block baslik %} Personeller
+{% block icerik %} 
+<div style="justify-content: center; align-items: center; text-align: center;">
+    <div style="display: flex;">
+        <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgba(15, 0, 0, 1); font-size: 35px;">PE.TA.PU.H.</p>
+        <img style="border: none; margin-top: 37px; margin-left: 50px; height: 35px; width: 35px;" src="/static/resimler/Icon Black.png" alt="">
+        <a class="ekle" style="width: 150px; margin-top: 45px; margin-left: 450px; background-color: rgba(15, 0, 0, 1);" href="/personel/ekle">Yeni Personel Ekle</a>
+        <a style="padding: 3px; width: 100px; margin-top: 45px; margin-left: 10px; background-color: rgba(15, 0, 0, 1);" href="/">Ana Sayfa</a>
+    </div>
+    <form id="arama-formu" action="{{ url_for('personel_arama') }}" method="post" style="padding: 0px; margin: 0%; margin-left: 10px; margin-top: 3px;">
+        <input  style="margin-top: 0px; margin: 0px; width: 400px; border-radius: 15px;" type="text" name="arama" placeholder="Personel Ara">
+        <button  style="margin: 0px; color: white; background-color: rgba(15, 0, 0, 1);" type="submit">Ara</button>
+    </form>
+    <table class="personel" style="margin-top: 20px; margin-left: 95px;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Personel Adı</th>
+                <th>Personel Soyadı</th>
+                <th>Personel Görevi</th>
+                <th>Personel İşe Giriş Tarihi</th>
+                <th>Personel Saatlik Ücreti</th>
+                <th>
+                    <a href="/personel/dok" style="background-color: rgba(15, 0, 0, 1);">
+                         Sayfaya Dök 
+                    </a>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for person in personel %} 
+            <tr>
+                <td> {{ person[0] }} </td>
+                <td> {{ person[1] }} </td>
+                <td> {{ person[2] }} </td>
+                <td> {{ person[3] }} </td>
+                <td> {{ person[4] }} </td>
+                <td> {{ person[5] }} </td>
+                <td>
+                <a class="guncelle" href="/personel/guncelle/{{ person[0] }}">Güncelle</a>
+                <a class="sil" href="/personel/sil/{{ person[0] }}">Sil</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody> 
+    </table>
+</div>
+{% endblock %} {% endblock %}

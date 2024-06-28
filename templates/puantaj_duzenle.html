@@ -1,0 +1,15 @@
+
+{% extends "taslak.html" %}
+{% block baslik %} Personel Güncelle {% endblock %}
+
+{% block icerik %} 
+<div class="main">
+    <form action="{{ url_for('puantaj_olustur', personelid=personel[0]) }}" method="post">
+        <input type="text" name="ekle" value="" placeholder="Eklenecek tarihi GG/AA/YYYY şeklinde giriniz." required><br>
+        <button style="margin-top: 0px; background-color: rgb(84, 207, 47);"> Kaydet </button>
+        {% if hata %}
+        <label>{{ hata }}</label>
+        {% endif %}
+    </form>    
+</div>
+{% endblock %} 

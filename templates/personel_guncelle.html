@@ -1,0 +1,19 @@
+{% extends "taslak.html" %}
+{% block baslik %} Personel Güncelle {% endblock %}
+
+{% block icerik %} 
+<div class="main">
+    <form action="{{ url_for('personel_kaydet') }}" method="post">
+        <input type="text" name="id" value="{{ personel[0] }}" readonly required><br>
+        <input type="text" name="personel-isim" value="{{ personel[1] }}" placeholder="İsim" required><br>
+        <input type="text" name="personel-soyisim" value="{{ personel[2] }}" placeholder="Soyisim" required><br>
+        <input type="text" name="personel-gorev" value="{{ personel[3] }}" placeholder="Görev" required><br>
+        <input type="text" name="personel-ise-baslangic" value="{{ personel[4] }}" placeholder="İşe Başlangıç Tarihi" required><br>
+        <input type="text" name="personel-saatlik-yevmiye" value="{{ personel[5] }}" placeholder="Saatlik Ücret" required><br>
+        <button style="margin-top: 0px; background-color: rgb(84, 207, 47);"> Kaydet </button>
+        {% if hata %}
+        <label>{{ hata }}</label>
+        {% endif %}
+    </form>    
+</div>
+{% endblock %} 

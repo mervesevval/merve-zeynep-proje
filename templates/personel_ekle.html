@@ -1,0 +1,18 @@
+{% extends "taslak.html" %}
+{% block baslik %} Personel Ekle {% endblock %}
+
+{% block icerik %} 
+<div class="main">
+    <form action="{{ url_for('personel_ekle') }}" method="post" enctype="multipart/form-data">
+        <input type="text" name="ad" placeholder="Personel Adı" required><br>
+        <input type="text" name="soyad" placeholder="Personel Soyadı" required><br>
+        <input type="text" name="gorev" placeholder="Görevi" required><br>
+        <input type="text" name="tarih" placeholder="İşe Başlangıç Tarihi" required><br>
+        <input type="text" name="saatlik" placeholder="Saatlik Ücreti" required><br>
+        <button style="margin-top: 0px; background-color: rgba(15, 0, 0, 1); color: white;"> Ekle </button>
+        {% if hata %}
+        <label>{{ hata }}</label>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}

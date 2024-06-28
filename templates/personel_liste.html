@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personel Listesi Dökümü</title>
+        <style>
+            @media print {
+                .noPrint{
+                    display:none;
+                }
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body style="height: 842px; width: 595px; margin-left: auto; margin-right: auto; justify-content: center; text-align: center;">
+        <h1>Personel Listesi</h1>
+        <p>Bu liste bilgi vermesi amacıyla PETAPUH tarafından oluşturulmuştur.</p>
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Adı</th>
+                    <th>Soyadı</th>
+                    <th>Görevi</th>
+                    <th>İşe Giriş Tarihi</th>
+                    <th>Saatlik Ücret</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for person in personel %}
+                <tr> 
+                    <td> {{ person[0] }} </td>
+                    <td> {{ person[1] }} </td>
+                    <td> {{ person[2] }} </td>
+                    <td> {{ person[3] }} </td>
+                    <td> {{ person[4] }} </td>
+                    <td> {{ person[5] }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button style="margin-top: 10px; background-color: transparent; border-color: transparent;" onclick="window.print();" class="noPrint">
+            <img style="width: 25px;" src="/static/resimler/3022251.png" alt="">
+        </button>
+    </body>
+</html>

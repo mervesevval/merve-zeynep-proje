@@ -1,0 +1,46 @@
+{% extends "taslak.html" %}
+{% block baslik %} Puantaj Sistemi
+{% block icerik %} 
+<div style="justify-content: center; align-items: center; text-align: center;">
+    <div style="display: flex;">
+        <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgba(15, 0, 0, 1); font-size: 35px;">PE.TA.PU.H.</p>
+        <img style="border: none; margin-top: 37px; margin-left: 50px; height: 35px; width: 35px;" src="/static/resimler/Icon Black.png" alt="">
+        <a style="padding: 3px; width: 100px; margin-top: 45px; margin-left: auto; background-color: rgba(15, 0, 0, 1);" href="/">Ana Sayfa</a>
+    </div>
+    <form id="arama-formu" action="{{ url_for('puantaj_arama') }}" method="post" style="padding: 0px; margin: 0%; margin-left: 10px; margin-top: 3px;">
+        <input  style="margin-top: 0px; margin: 0px; width: 400px; border-radius: 15px;" type="text" name="arama" placeholder="Personel Ara">
+        <button  style="margin: 0px; color: white; background-color: rgba(15, 0, 0, 1);" type="submit">Ara</button>
+    </form>
+    <table class="personel" style="margin-top: 20px; margin-left: auto;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Personel Adı</th>
+                <th>Personel Soyadı</th>
+                <th>Personel Görevi</th>
+                <th>Personel İşe Giriş Tarihi</th>
+                <th>Personel Saatlik Ücreti</th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for person in personel %} 
+            <tr>
+                <td> {{ person[0] }} </td>
+                <td> {{ person[1] }} </td>
+                <td> {{ person[2] }} </td>
+                <td> {{ person[3] }} </td>
+                <td> {{ person[4] }} </td>
+                <td> {{ person[5] }} </td>
+                <td style="width: 130px; height: 60px;">
+                <a style="background-color: rgb(58, 0, 0);" href="/puantaj/goruntule/{{ person[0] }}">Puantaj Görüntüle</a>
+                <a style="background-color: rgb(99, 0, 0); margin-top: 3px; height: 40px;" href="/puantaj/olustur/{{ person[0] }}">Puantaj Oluştur/<br>Duzenle</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody> 
+    </table>
+</div>
+{% endblock %} {% endblock %} 

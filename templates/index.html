@@ -1,0 +1,54 @@
+{% extends "taslak.html" %} 
+{% block baslik %} Anasayfa {% endblock %}
+
+{% block icerik %} 
+<!--
+<div>
+    <div style="width: 200%; background-color: rgb(94, 38, 0); display: flex; height: 50px; margin-left: 0px;">
+        
+        <div style="display: flex; margin-top: 12px;">
+            <span style="margin-top: 0px; margin-left: 20px; font-size: 30px; color: white;"><b>PETAPUH</b></span>
+            <a class="ekle" style="width: 100px; margin-left: 10px; margin-right: 10px; background-color: rgb(84, 207, 47);" href="/cikis">Çıkış Yap</a>
+        </div>
+    </div>
+    <div>
+        <a style="padding: 3px; width: 100px; margin-left: 275px; margin-right: 10px; background-color: rgb(84, 207, 47);" href="/kitaplar">Kitaplar</a>
+    </div>
+</div>
+-->
+
+<div style="justify-content: center; align-items: center; text-align: center;">
+
+    <div style="display: flex;">
+            <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgba(15, 0, 0, 1); font-size: 35px;">PE.TA.PU.H.</p>
+            <img style="border: none; margin-top: 37px; margin-left: 810px; height: 35px; width: 35px;" src="/static/resimler/Icon Black.png" alt="">
+    </div>
+
+    <a class="ekle" style="width: 100px; margin-left: 886px; background-color: rgba(15, 0, 0, 1);" href="/cikis">Çıkış Yap</a>
+
+    <a class="personel-bilgi" href="/personel" style="margin-top: 25px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(255, 255, 255); font-size: 20; background-color: rgba(15, 0, 0, 1); height: 130px; width: 1000px;">
+        <div>
+            <img src="/static/resimler/321991-200.png" style="height: 75px; margin-top: 8px;">
+            <p>Personel Bilgileri</p>
+        </div>
+    </a>
+    <a class="personel-ekle" href="/personel/ekle" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(255, 255, 255); font-size: 20; background-color: rgba(15, 0, 0, 1); height: 130px; margin-top: 10px;">
+        <div>
+            <img src="/static/resimler/personel-ekle.png" style="height: 75px; margin-top: 8px;">
+            <p>Personel Ekle</p>
+        </div>
+    </a>
+    <a class="puantaj-sistemi" href="/puantaj" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(255, 255, 255); font-size: 20; background-color: rgba(15, 0, 0, 1); height: 130px; margin-top: 10px;">
+        <div>
+            <img src="/static/resimler/puantaj.png" style="height: 75px; margin-top: 8px;">
+            <p>Puantaj Sistemi</p>
+        </div>
+    </a>
+    <a class="bordro-sistemi" href="/bordro" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(255, 255, 255); font-size: 20; background-color: rgba(15, 0, 0, 1); height: 130px; margin-top: 10px;">
+        <div>
+            <img src="/static/resimler/png-transparent-payroll-management-corporation-salary-computer-icons-payroll-white-text-monochrome-thumbnail.png" style="height: 75px; margin-top: 8px;">
+            <p>Bordro Sistemi</p>
+        </div>
+    </a>
+</div>
+{% endblock %}

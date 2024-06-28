@@ -1,0 +1,15 @@
+{% extends "taslak.html" %} 
+{% block baslik %} Giriş Sayfası {% endblock %}
+
+{% block icerik %} 
+    <div class="main">
+        <form style="margin-top: 25px;" action="{{ url_for('giris_kontrol') }}" method="post">
+            <input type="text" name="isim" placeholder="Kullanıcı adınızı girin..." required><br>
+            <input type="password" name="sifre" placeholder="Şifrenizi girin..." required><br>
+            <button style="margin-top: 0px; background-color: rgb(84, 207, 47); color: white;"> <b>Giriş Yap</b> </button>   
+            {% if hata %}
+                <label> {{ hata }} </label>
+            {% endif %}
+        </form>    
+    </div>
+{% endblock %} 

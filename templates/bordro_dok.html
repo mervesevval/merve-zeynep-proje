@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        @media print {
+            .noPrint{
+                display:none;
+            }
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+  </head>
+  <body style="height: 842px; width: 595px; margin-left: auto; margin-right: auto;">
+    <div class="baslik" style="display: flex;">
+        <h1>
+           Ücret Bordrosu
+        </h1>
+        <button style="margin-top: 10px;margin-left: auto; background-color: transparent; border-color: transparent;" onclick="window.print();" class="noPrint">
+            <img style="width: 25px;" src="/static/resimler/3022251.png" alt="">
+        </button>
+    </div>
+    <div class="tablo-bilgi">
+        <table style="width:100%">
+            <tr>
+                <th>Yılı</th>
+                <th>Ay</th>
+                <th>İsim Soyisim</th>
+                <th>Görevi</th>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>02</td>
+                <td>{{personel[1]}} {{personel[2]}}</td>
+                <td>{{personel[3]}}</td>
+            </tr>
+        </table>         
+    </div>
+    <div class="tablo-govde" style="display: flex;">
+        <div style="width:27%;">
+            <table style="width:100%; margin-top: 25px;">
+                <tr>
+                    <th style="font-size: 12px;">Birimi:</th>
+                    <td style="font-size: 12px;">Teknik Birim</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Çalıştığı Gün:</th>
+                    <td style="font-size: 12px;">30</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Saatlik Ücret:</th>
+                    <td style="font-size: 12px;">{{personel[5]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Günlük Brüt Ücret:</th>
+                    <td style="font-size: 12px;">{{personel[6]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Aylık Brüt Ücret:</th>
+                    <td style="font-size: 12px;">{{personel[7]}} ₺</td>
+                </tr>
+            </table>
+        </div>
+        <div style="width:38%; margin-left: 1%;">
+            <table style="width:100%; margin-top: 25px;">
+                <tr>
+                    <th style="font-size: 12px;">KAZANÇLAR</th>
+                    <th style="font-size: 12px;">KESİNTİLER</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                    <td style="font-size: 12px; height: 15px;"></td>
+                </tr>
+            </table>
+        </div>
+        <div style="width:34%; margin-left: 1%;">
+            <table style="width:100%; margin-top: 25px;">
+                <tr>
+                    <th style="font-size: 12px;">SGK Payı</th>
+                    <td id="gelir-vergisi" class="gelir-vergisi" style="font-size: 12px;">{{personel[8]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">İşsizlik Kesintisi</th>
+                    <td class="issizlik-kesintisi" style="font-size: 12px;">{{personel[9]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Toplam SGK Kesintisi</th>
+                    <td class="sgk-kesintisi" style="font-size: 12px;">{{personel[10]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Gelir Vergisi Matrahı</th>
+                    <td class="gelir-vergisi-matrahı" style="font-size: 12px;">{{personel[12]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">İstisna Öncesi Gelir Vergisi</th>
+                    <td class="gelir-vergisi" style="font-size: 12px;">{{personel[19]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Gelir Vergisi İstisnası</th>
+                    <td class="gelir-vergisi-istisna" style="font-size: 12px;">{{personel[11]}} ₺</td>
+                </tr> 
+                <tr>
+                    <th style="font-size: 12px;">Ödenecek Gelir Vergisi</th>
+                    <td class="ödenecek-gelir-vergisi" style="font-size: 12px;">{{personel[13]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Damga Vergisi İstisnası</th>
+                    <td class="damga-vergisi-istisna" style="font-size: 12px;">{{personel[14]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Damga Vergisi Matrahı</th>
+                    <td class="damga-vergisi-matrahı" style="font-size: 12px;">{{personel[15]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">İstisna Öncesi Damga Vergisi</th>
+                    <td class="damga-vergisi" style="font-size: 12px;">{{personel[20]}} ₺</td>
+                </tr>
+                <tr>
+                    <th style="font-size: 12px;">Ödenecek Damga Vergisi</th>
+                    <td class="ödenecek-damga-vergisi" style="font-size: 12px;">{{personel[16]}} ₺</td>
+                </tr>
+            </table>
+            <table style="margin-top: 12px;">
+                <tr>
+                    <th style="font-size: 12px;">KAZANÇLAR TOPLAMI</th>
+                    <td style="font-size: 12px;">{{personel[7]}} ₺</td>
+                </tr>
+            </table>
+            <table style="margin-top: 12px;">
+                <tr>
+                    <th style="font-size: 12px;">KESİNTİLER TOPLAMI</th>
+                    <td style="font-size: 12px;">{{personel[18]}} ₺</td>
+                </tr>
+            </table>
+            <table style="margin-top: 12px; width: 100%;">
+                <tr>
+                    <th style="font-size: 12px;">NET ÜCRET</th>
+                    <td style="font-size: 12px;">{{personel[17]}} ₺</td>
+                </tr>
+            </table>
+            <p style="margin-top: 12px; font-size: 12px;">Ücretimi net ve eksiksiz şekilde aldım</p>
+            <div style="border: 2px solid black; height: 25%;">
+            </div>
+        </div> 
+    </div>
+  </body>
+</html>

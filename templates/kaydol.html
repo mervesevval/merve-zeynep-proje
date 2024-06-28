@@ -1,0 +1,16 @@
+{% extends "taslak.html" %} 
+{% block baslik %} Kayıt {% endblock %}
+
+{% block icerik %} 
+    <div class="main">
+        <form style="margin-top: 25px;" action="{{ url_for('kayit') }}" method="post">
+            <input type="text" name="isim" placeholder="Kullanıcı adınızı girin..." required><br>
+            <input type="email" name="email" placeholder="E-Mailinizi girin..." required><br>
+            <input type="password" name="sifre" placeholder="Şifrenizi girin..." required><br>
+            <button style="margin-top: 0px; background-color: rgb(84, 207, 47); color: white;"> Kaydol </button>
+            {% if hata %}
+            <label>{{ hata }}</label>
+            {% endif %}
+        </form>    
+    </div>
+{% endblock %} 

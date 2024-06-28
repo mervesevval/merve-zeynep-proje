@@ -1,0 +1,97 @@
+a{
+    text-decoration: none;
+    height: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: linear-gradient(rgb(209, 209, 209), rgb(255, 255, 255));
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    margin-top: 100px;
+    width: 300px;
+    height: 100%;
+    box-shadow: 5px 10px 130px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input{
+    width: 150px;
+    height: 20px;
+    padding: 10px;
+    margin: 5px;
+    margin-left: 12px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    background-color: chartreuse;
+    margin: 50px;
+}
+
+label{
+    color: rgb(118, 48, 16);
+    margin-left: 10px;
+}
+table{
+    margin-top: 5px;
+}
+thead {
+    border-radius: 5px;
+
+}
+tbody {
+    margin-top: 5px;
+    border-radius: 5px;
+}
+td{
+    border: 1px solid rgb(94, 38, 0);
+}
+th{
+    border: 1px solid rgb(94, 38, 0);
+}
+.urunler{
+    background-color: chocolate;
+    width: 550px;
+    height: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.guncelle{
+    background-color: rgb(58, 0, 0);
+    padding: 3px;
+    width: 80%;
+    margin-left: 3px;
+}
+
+.sil{
+    background-color: rgb(99, 0, 0);
+    padding: 3px;
+    width: 80%;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.ekle{
+    padding: 3px;
+}
+
+#arama-formu-wrapper {
+    margin-top: 12px; /* İstenilen bir değer */
+}
+
+
+img{
+    width: 100px;
+    height: 150px;
+    border: 2px solid black;
+}

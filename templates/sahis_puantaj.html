@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        @media print {
+            .noPrint {
+                display: none;
+            }
+        }
+        table, th, td {
+            font-size: 12px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+  </head>
+  <body style="height: 595px; width: 842px; margin-left: auto; margin-right: auto; justify-content: center; align-items: center; text-align: center;">
+    <div class="baslik" style="display: flex;">
+        <h1 class="noPrint">
+            Personel Puantaj Sistemi
+        </h1>
+        <button style="margin-top: 10px; margin-left: auto; background-color: transparent; border-color: transparent;" onclick="window.print();" class="noPrint">
+            <img style="width: 25px;" src="/static/resimler/3022251.png" alt="">
+        </button>
+    </div>
+    <div class="govde-baslik">
+        <h2>
+            {{ personel[0][3] }}'ın Puantajı
+        </h2>
+    </div>
+    <div class="govde" style="text-align: center; justify-content: center; justify-items: center; align-items: center;">
+        <table style="width: 100%; text-align: center; justify-content: center; justify-items: center; align-items: center;">
+            <thead>
+                <tr>
+                    <th style="width: 45px;">Sıra No.</th>
+                    <th style="width: 250px;">Personel Adı Soyadı</th>
+                    <th>Tarih</th>
+                    <th>Durum</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for person in personel %}
+                <tr>
+                    <td>{{ person[0] }}</td>
+                    <td>{{ person[3] }}</td>
+                    <td>{{ person[2] }}</td>
+                    <td>✓</td>
+                    <td><input type="text"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+  </body>
+</html>
